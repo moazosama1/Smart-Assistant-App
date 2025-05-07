@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "690786258538",
+    "project_id": "smart-assistant-app-2025",
+    "storage_bucket": "smart-assistant-app-2025.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690786258538:android:2ebd8097363e08b8434413",
+        "android_client_info": {
+          "package_name": "com.example.chat_bot_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm-oDDmSxwelpE9y2kAPf3VmIsMOFRd-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
