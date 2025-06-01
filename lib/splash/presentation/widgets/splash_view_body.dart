@@ -1,5 +1,4 @@
 import 'package:chat_bot_app/core/buttons/custom_main_button.dart';
-import 'package:chat_bot_app/core/utils/assets_app.dart';
 import 'package:chat_bot_app/home/presentation/home_view.dart';
 import 'package:chat_bot_app/splash/presentation/widgets/section_logo.dart';
 import 'package:flutter/material.dart';

@@ -29,17 +29,16 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.8
+  dio: ^5.8.0+1
   firebase_core: ^3.13.0
   flutter:
     sdk: flutter
+  flutter_staggered_grid_view: ^0.7.0
   flutter_svg: ^2.1.0
+  font_awesome_flutter: ^10.8.0
+  toggle_switch: ^2.3.0
 
 dev_dependencies:
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
@@ -81,7 +80,7 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 flutter_assets:
-  assets_path: 
+  assets_path:
     - assets/icons/
     - assets/image/
   output_path: lib/core/utils/

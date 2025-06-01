@@ -10,9 +10,13 @@ class AssetApp {
 
   static const String iconsGoogleAi = "assets/icons/google_ai.svg";
 
+  static const String iconsMic = "assets/icons/mic.svg";
+
   static const String iconsMidjoutney = "assets/icons/midjoutney.svg";
 
   static const String iconsRumor = "assets/icons/rumor.svg";
+
+  static const String iconsSend2 = "assets/icons/send-2.svg";
 
   static const String iconsShape = "assets/icons/shape.svg";
 

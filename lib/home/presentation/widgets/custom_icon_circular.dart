@@ -20,6 +20,7 @@ class CustomIconCircular extends StatelessWidget {
               )
             : null,
       ),
+      margin: EdgeInsets.all(8),
       padding: EdgeInsets.all(8),
       child: SvgPicture.asset(
         svgPath,
