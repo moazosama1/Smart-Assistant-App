@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:chat_bot_app/core/utils/colors_app.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -23,10 +25,9 @@ ToggleSwitch themeToggleSwitch() {
       [Colors.yellow, Colors.orange]
     ],
     animate: true,
-    curve: Curves
-        .bounceInOut, // animate must be set to true when using custom curve
+    curve: Curves.bounceInOut,
     onToggle: (index) {
-      print('switched to: $index');
+      log('switched to: $index');
     },
   );
 }
@@ -50,7 +51,7 @@ ToggleSwitch languageToggleSwitch() {
     fontSize: 14,
     radiusStyle: true,
     onToggle: (index) {
-      print('switched to: $index');
+      log('switched to: $index');
     },
   );
 }

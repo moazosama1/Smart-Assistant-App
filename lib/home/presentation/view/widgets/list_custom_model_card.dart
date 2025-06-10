@@ -1,9 +1,9 @@
 import 'package:chat_bot_app/core/models/list_card_model.dart';
-import 'package:chat_bot_app/home/presentation/widgets/custom_card.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/custom_card.dart';
 import 'package:flutter/material.dart';
 
-class ListCustomCard extends StatelessWidget {
-  const ListCustomCard({super.key});
+class ListCustomModelCard extends StatelessWidget {
+  const ListCustomModelCard({super.key});
 
   @override
   Widget build(BuildContext context) {

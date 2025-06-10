@@ -19,8 +19,8 @@ class CustomMainButton extends StatelessWidget {
         child: Center(
           child: Text(
             textButton,
-            style:
-                theme.textTheme.titleSmall!.copyWith(color: ColorsApp.blackColor),
+            style: theme.textTheme.titleSmall!
+                .copyWith(color: ColorsApp.blackColor),
           ),
         ),
       ),

@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class AssetApp {
   AssetApp._();
-  
+
   static const String iconsAiLogo = "assets/icons/ai_logo.svg";
 
   static const String iconsChatGpt = "assets/icons/chat_gpt.svg";
@@ -34,4 +34,3 @@ class AssetApp {
 
   static const String imageViolin = "assets/image/violin.png";
 }
-

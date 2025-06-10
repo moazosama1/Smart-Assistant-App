@@ -1,5 +1,5 @@
 import 'package:chat_bot_app/core/utils/colors_app.dart';
-import 'package:chat_bot_app/home/presentation/widgets/custom_attach_option.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/custom_attach_option.dart';
 import 'package:flutter/material.dart';
 
 void showAttachmentPicker(BuildContext context) {

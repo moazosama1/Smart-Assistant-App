@@ -1,6 +1,6 @@
-import 'package:chat_bot_app/home/presentation/widgets/ListCustomCard.dart';
-import 'package:chat_bot_app/home/presentation/widgets/custom_card_message_history.dart';
-import 'package:chat_bot_app/home/presentation/widgets/custom_header.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/list_custom_model_card.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/custom_card_message_history.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/custom_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -25,7 +25,7 @@ class HomeViewBody extends StatelessWidget {
           ),
           Expanded(
             flex: 2,
-            child: ListCustomCard(),
+            child: ListCustomModelCard(),
           ),
           SizedBox(
             height: 10,

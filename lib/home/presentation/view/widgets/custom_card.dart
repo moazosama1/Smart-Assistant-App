@@ -1,6 +1,6 @@
 import 'package:chat_bot_app/core/models/card_model.dart';
-import 'package:chat_bot_app/home/presentation/chat_view.dart';
-import 'package:chat_bot_app/home/presentation/widgets/custom_circular.dart';
+import 'package:chat_bot_app/home/presentation/view/chat_view.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/custom_circular.dart';
 import 'package:flutter/material.dart';
 
 class CustomCard extends StatelessWidget {

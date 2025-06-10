@@ -1,14 +1,14 @@
 import 'package:chat_bot_app/core/utils/colors_app.dart';
-import 'package:chat_bot_app/home/presentation/widgets/custom_circular.dart';
+import 'package:chat_bot_app/home/domain/entities/text_generation_entities/text_generation_entities.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/custom_circular.dart';
 import 'package:flutter/material.dart';
 
 class CustomSenderMessage extends StatelessWidget {
-  const CustomSenderMessage({super.key});
-
+  const CustomSenderMessage({super.key, required this.textGenerationEntities});
+  final TextGenerationEntities textGenerationEntities;
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
-
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: 8,
@@ -32,7 +32,7 @@ class CustomSenderMessage extends StatelessWidget {
               ),
             ),
             child: Text(
-              "Human: Yes, I think Python might be interesting. Where should I start?",
+              textGenerationEntities.requestText,
               style: theme.textTheme.titleSmall,
             ),
           ),

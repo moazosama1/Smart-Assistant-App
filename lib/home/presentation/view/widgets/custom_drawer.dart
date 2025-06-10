@@ -1,7 +1,7 @@
 import 'package:chat_bot_app/core/utils/colors_app.dart';
 import 'package:chat_bot_app/core/widgets/toggle_switch.dart';
-import 'package:chat_bot_app/home/presentation/widgets/custom_person_image.dart';
-import 'package:chat_bot_app/home/presentation/widgets/custom_switch_button.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/custom_person_image.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/custom_switch_button.dart';
 import 'package:flutter/material.dart';
 
 class CustomDrawer extends StatelessWidget {

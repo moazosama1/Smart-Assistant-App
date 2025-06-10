@@ -1,6 +1,7 @@
+// ignore: file_names
 import 'package:chat_bot_app/core/utils/assets_app.dart';
-import 'package:chat_bot_app/home/presentation/widgets/custom_icon_circular.dart';
-import 'package:chat_bot_app/home/presentation/widgets/custom_person_image.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/custom_icon_circular.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/custom_person_image.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar {
@@ -27,4 +28,3 @@ class CustomAppBar {
     );
   }
 }
-

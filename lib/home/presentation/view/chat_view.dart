@@ -1,5 +1,5 @@
 import 'package:chat_bot_app/core/utils/constant.dart';
-import 'package:chat_bot_app/home/presentation/widgets/chat_view_body.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/chat_view_body.dart';
 import 'package:flutter/material.dart';
 
 class ChatView extends StatelessWidget {
