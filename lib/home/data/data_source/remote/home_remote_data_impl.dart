@@ -1,6 +1,10 @@
+import 'dart:developer';
+import 'dart:typed_data';
+
 import 'package:chat_bot_app/core/api_services/api_services.dart';
 import 'package:chat_bot_app/home/data/data_source/remote/home_remote_data.dart';
 import 'package:chat_bot_app/home/data/models/text_generation_model/text_generation_model.dart';
+import 'package:chat_bot_app/home/domain/entities/image_generation_entities.dart';
 import 'package:chat_bot_app/home/domain/entities/text_generation_entities/text_generation_entities.dart';
 
 class HomeRemoteDataImpl extends HomeRemoteData {
@@ -22,6 +26,13 @@ class HomeRemoteDataImpl extends HomeRemoteData {
       },
     );
     var response = TextGenerationModel.fromJson(request, message);
+    return response;
+  }
+
+  @override
+  Future<Uint8List> fetchImageGeneration(
+      {required String prompt}) async {
+    var response = await apiServices.postGenerateImage(prompt: prompt);
     return response;
   }
 }

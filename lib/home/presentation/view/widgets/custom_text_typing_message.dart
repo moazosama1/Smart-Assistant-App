@@ -1,6 +1,6 @@
 import 'package:chat_bot_app/home/presentation/view/widgets/custom_circular.dart';
 import 'package:chat_bot_app/home/presentation/view/widgets/custom_text_field.dart';
-import 'package:chat_bot_app/home/presentation/view_model/cubit/chat_text_generation_cubit.dart';
+import 'package:chat_bot_app/home/presentation/view_model/cubit/chat_text_generation/chat_text_generation_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

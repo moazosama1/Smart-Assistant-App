@@ -1,5 +1,5 @@
 import 'package:chat_bot_app/core/utils/constant.dart';
-import 'package:chat_bot_app/home/presentation/view/widgets/custom_appBar.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/custom_app_bar.dart';
 import 'package:chat_bot_app/home/presentation/view/widgets/custom_drawer.dart';
 import 'package:chat_bot_app/home/presentation/view/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';

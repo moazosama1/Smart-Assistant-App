@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "Flutter (lib\\home\\presentation\\view\\widgets\\custom_person_image.dart)",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib\\home\\presentation\\view\\widgets\\custom_person_image.dart"
+        }
+    ]
+}

@@ -10,10 +10,11 @@ class TextGenerationEntities extends HiveObject {
   @HiveField(2)
   int? dateTime = DateTime.now().millisecondsSinceEpoch;
   final bool isLoading;
-  final bool isUser;
-  TextGenerationEntities(
-      {required this.requestText,
-      required this.responseText,
-      required this.isUser,
-      this.isLoading = false});
+  bool isUser = true;
+  TextGenerationEntities({
+    required this.requestText,
+    required this.responseText,
+    this.isUser = true,
+    this.isLoading = false,
+  });
 }

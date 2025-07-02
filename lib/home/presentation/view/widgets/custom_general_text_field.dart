@@ -1,12 +1,10 @@
 import 'package:chat_bot_app/core/utils/assets_app.dart';
-import 'package:chat_bot_app/core/utils/colors_app.dart';
 import 'package:chat_bot_app/core/widgets/custom_border_text_field.dart';
-import 'package:chat_bot_app/core/widgets/show_attachment_picker.dart';
 import 'package:chat_bot_app/home/presentation/view/widgets/custom_icon_circular.dart';
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
-  const CustomTextField(
+class CustomGeneralTextField extends StatelessWidget {
+  const CustomGeneralTextField(
       {super.key,
       required this.textEditingController,
       this.onTap,
@@ -28,15 +26,6 @@ class CustomTextField extends StatelessWidget {
         enabledBorder: customBorderTextField(),
         disabledBorder: customBorderTextField(),
         focusedBorder: customBorderTextField(),
-        prefixIcon: GestureDetector(
-          onTap: () {
-            showAttachmentPicker(context);
-          },
-          child: Icon(
-            Icons.attach_file_rounded,
-            color: ColorsApp.whiteColor,
-          ),
-        ),
         suffixIcon: GestureDetector(
           onTap: onTap,
           child: CustomIconCircular(

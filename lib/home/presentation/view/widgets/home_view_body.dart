@@ -1,8 +1,9 @@
 import 'package:chat_bot_app/home/presentation/view/widgets/list_custom_model_card.dart';
-import 'package:chat_bot_app/home/presentation/view/widgets/custom_card_message_history.dart';
 import 'package:chat_bot_app/home/presentation/view/widgets/custom_header.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/list_of_all_sessions_message.dart';
+import 'package:chat_bot_app/home/presentation/view_model/cubit/all_session_message/all_session_message_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -36,24 +37,14 @@ class HomeViewBody extends StatelessWidget {
           ),
           Expanded(
             flex: 3,
-            child: GridView.custom(
-              gridDelegate: SliverWovenGridDelegate.count(
-                crossAxisCount: 2,
-                mainAxisSpacing: 6,
-                crossAxisSpacing: 6,
-                pattern: [
-                  WovenGridTile(5 / 7, crossAxisRatio: 1),
-                  WovenGridTile(
-                    5 / 6,
-                    crossAxisRatio: 1,
-                    alignment: AlignmentDirectional.centerEnd,
-                  ),
-                ],
-              ),
-              childrenDelegate: SliverChildBuilderDelegate(
-                childCount: 20,
-                (context, index) => CustomCardMessageHistory(),
-              ),
+            child: BlocBuilder<AllSessionMessageCubit, AllSessionMessageState>(
+              builder: (context, state) {
+                return ListOfAllSessionsMessage(
+                  listSessions: BlocProvider.of<AllSessionMessageCubit>(
+                    context,
+                  ).listMessage,
+                );
+              },
             ),
           ),
         ],

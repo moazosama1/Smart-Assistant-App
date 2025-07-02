@@ -1,7 +1,14 @@
+import 'dart:developer';
+
 import 'package:chat_bot_app/core/models/card_model.dart';
+import 'package:chat_bot_app/home/data/data_source/store/store_data.dart';
 import 'package:chat_bot_app/home/presentation/view/chat_view.dart';
+import 'package:chat_bot_app/home/presentation/view/image_generation_view.dart';
 import 'package:chat_bot_app/home/presentation/view/widgets/custom_circular.dart';
+import 'package:chat_bot_app/home/presentation/view_model/provider/main_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:uuid/uuid.dart';
 
 class CustomCard extends StatelessWidget {
   const CustomCard({super.key, required this.cardModel});
@@ -12,7 +19,29 @@ class CustomCard extends StatelessWidget {
     var theme = Theme.of(context);
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, ChatView.routeName);
+        switch (cardModel.index) {
+          case 0:
+            {
+              final String uuid = Uuid().v1();
+              Provider.of<MainProvider>(context, listen: false)
+                  .newSessionId(id: uuid);
+              StoreData.addNewSession(sessionId: uuid);
+
+              Navigator.pushNamed(context, ChatView.routeName);
+            }
+          case 1:
+            {
+              Navigator.pushNamed(context, ImageGenerationView.routeName);
+            }
+          case 2:
+            {
+              log("not create");
+            }
+          default:
+            {
+              StoreData.deleteBox();
+            }
+        }
       },
       child: AspectRatio(
         aspectRatio: 200 / 240,

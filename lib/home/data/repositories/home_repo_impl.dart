@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:typed_data';
 
 import 'package:chat_bot_app/core/error/custom_failure.dart';
 import 'package:chat_bot_app/home/data/data_source/remote/home_remote_data.dart';
@@ -17,6 +18,22 @@ class HomeRepoImpl extends HomeRepo {
     try {
       var response = await homeRemoteData.fetchTextGeneration(message: message);
       return left(response);
+    } catch (e) {
+      if (e is DioException) {
+        return right(ServerFailure.fromDio(e));
+      } else {
+        log(e.toString());
+        return right(ServerFailure(errorMessage: e.toString()));
+      }
+    }
+  }
+
+  @override
+  Future<Either<Uint8List, Failure>> fetchFutureImageGeneration(
+      {required String prompt}) async {
+    try {
+      var data = await homeRemoteData.fetchImageGeneration(prompt: prompt);
+      return left(data);
     } catch (e) {
       if (e is DioException) {
         return right(ServerFailure.fromDio(e));

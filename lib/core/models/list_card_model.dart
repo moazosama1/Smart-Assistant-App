@@ -12,6 +12,7 @@ class ListCardModel {
       backgroundColor: ColorsApp.primaryColor,
       imagePath: AssetApp.imageChatBalloon,
       icon: Icons.chat_rounded,
+      index: 0,
     ),
     CardModel(
       title: " Video Generation",
@@ -20,22 +21,23 @@ class ListCardModel {
       backgroundColor: ColorsApp.orangeColor,
       imagePath: AssetApp.imageAiVideo,
       icon: Icons.video_collection,
+      index: 1,
     ),
     CardModel(
-      title: "Image Generation",
-      description:
-          "Describe it, and I’ll bring it to life — your vision, turned into visuals.",
-      backgroundColor: Colors.redAccent,
-      imagePath: AssetApp.imageContentCreator,
-      icon: Icons.mic_rounded,
-    ),
+        title: "Image Generation",
+        description:
+            "Describe it, and I’ll bring it to life — your vision, turned into visuals.",
+        backgroundColor: Colors.redAccent,
+        imagePath: AssetApp.imageContentCreator,
+        icon: Icons.mic_rounded,
+        index: 2),
     CardModel(
-      title: "Music Generation",
-      description:
-          "Create and explore sound like never before — your AI music assistant is here.",
-      backgroundColor: ColorsApp.yellowColor,
-      imagePath: AssetApp.imageViolin,
-      icon: Icons.mic_rounded,
-    ),
+        title: "Music Generation",
+        description:
+            "Create and explore sound like never before — your AI music assistant is here.",
+        backgroundColor: ColorsApp.yellowColor,
+        imagePath: AssetApp.imageViolin,
+        icon: Icons.mic_rounded,
+        index: 3),
   ];
 }

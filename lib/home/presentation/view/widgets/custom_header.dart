@@ -1,4 +1,6 @@
+import 'package:chat_bot_app/home/presentation/view_model/cubit/all_session_message/all_session_message_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomHeader extends StatelessWidget {
   const CustomHeader({
@@ -15,9 +17,11 @@ class CustomHeader extends StatelessWidget {
           "History",
           style: theme.textTheme.titleMedium,
         ),
-        Text(
-          "show all",
-          style: theme.textTheme.titleSmall,
+        GestureDetector(
+          onTap: () {
+            BlocProvider.of<AllSessionMessageCubit>(context).getAllSessions();
+          },
+          child: Icon(Icons.replay_outlined),
         ),
       ],
     );

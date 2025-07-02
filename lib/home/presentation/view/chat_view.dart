@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class ChatView extends StatelessWidget {
   const ChatView({super.key});
   static const String routeName = Constant.chatViewName;
+
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);

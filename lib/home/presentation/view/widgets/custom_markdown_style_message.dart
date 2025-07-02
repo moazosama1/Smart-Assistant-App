@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:chat_bot_app/home/domain/entities/text_generation_entities/text_generation_entities.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';

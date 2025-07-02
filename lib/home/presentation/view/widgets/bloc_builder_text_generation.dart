@@ -1,5 +1,5 @@
-import 'package:chat_bot_app/home/presentation/view/widgets/list_chat_message.dart';
-import 'package:chat_bot_app/home/presentation/view_model/cubit/chat_text_generation_cubit.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/list_chat_text_message.dart';
+import 'package:chat_bot_app/home/presentation/view_model/cubit/chat_text_generation/chat_text_generation_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -15,7 +15,7 @@ class BlocBuilderTextGeneration extends StatelessWidget {
         switch (state) {
           case ChatTextGenerationInitial():
             return Expanded(
-              child: ListChatMessage(
+              child: ListTextChatMessage(
                 textMessage: state.textMessage,
               ),
             );
@@ -25,7 +25,7 @@ class BlocBuilderTextGeneration extends StatelessWidget {
             );
           case ChatTextGenerationSuccess():
             return Expanded(
-              child: ListChatMessage(
+              child: ListTextChatMessage(
                 textMessage: state.textMessage,
               ),
             );

@@ -43,6 +43,7 @@ class TextGenerationModel extends TextGenerationEntities {
       'usageMetadata': usageMetadata?.toJson(),
       'modelVersion': modelVersion,
       'responseId': responseId,
+      'requestMessage' :requestMessage
     };
   }
 }

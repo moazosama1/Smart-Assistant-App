@@ -1,5 +1,5 @@
 import 'package:chat_bot_app/home/presentation/view/widgets/bloc_builder_text_generation.dart';
-import 'package:chat_bot_app/home/presentation/view/widgets/custom_typing_message.dart';
+import 'package:chat_bot_app/home/presentation/view/widgets/custom_text_typing_message.dart';
 import 'package:flutter/material.dart';
 
 class ChatViewBody extends StatelessWidget {

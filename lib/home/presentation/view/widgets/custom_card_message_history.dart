@@ -1,8 +1,11 @@
+import 'package:chat_bot_app/core/utils/function.dart';
+import 'package:chat_bot_app/home/domain/entities/text_generation_entities/text_generation_entities.dart';
 import 'package:flutter/material.dart';
 
 class CustomCardMessageHistory extends StatelessWidget {
-  const CustomCardMessageHistory({super.key});
-
+  const CustomCardMessageHistory(
+      {super.key, required this.textGenerationEntities});
+  final TextGenerationEntities textGenerationEntities;
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
@@ -21,7 +24,7 @@ class CustomCardMessageHistory extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "How can I forget a bad memory?",
+            textGenerationEntities.requestText,
             style: theme.textTheme.titleMedium!.copyWith(
               color: theme.colorScheme.primary,
             ),
@@ -31,15 +34,16 @@ class CustomCardMessageHistory extends StatelessWidget {
             padding: const EdgeInsets.only(left: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "AI: Great choice! Start by learning basic concepts like variables, conditional statements, and loops. try to start small projects to gain practical experience.AI: You can start with writing a simple program like a calculator or a list manager.",
+                  textGenerationEntities.responseText,
                   style: theme.textTheme.titleSmall,
                   maxLines: 4,
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
-                  "28 mins ago",
+                  formatDate(textGenerationEntities.dateTime!),
                   style: theme.textTheme.titleSmall!
                       .copyWith(color: Colors.grey, fontSize: 10),
                 ),
